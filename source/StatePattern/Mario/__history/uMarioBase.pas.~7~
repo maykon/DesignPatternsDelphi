@@ -1,0 +1,36 @@
+unit uMarioBase;
+
+interface
+
+uses
+  uMarioStateAPI;
+
+type
+  TMarioBase = class(TInterfacedObject, IMarioStateAPI)
+  private
+    FnImage: integer;
+    function GetImage: integer;
+    procedure SetImage(const pnImage: integer);
+  protected
+    property nImage: integer read GetImage write SetImage;
+  public
+    function NovaVida: IMarioStateAPI; virtual; abstract;
+    function PegarCogumelo: IMarioStateAPI; virtual; abstract;
+    function LevarDano: IMarioStateAPI; virtual; abstract;
+  end;
+
+implementation
+
+{ TMarioBase }
+
+function TMarioBase.GetImage: integer;
+begin
+  result := FnImage;
+end;
+
+procedure TMarioBase.SetImage(const pnImage: integer);
+begin
+  FnImage := pnImage;
+end;
+
+end.

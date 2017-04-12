@@ -1,0 +1,16 @@
+﻿[]
+Coordinates=149,80,82,33
+
+[ilMario]
+Coordinates=175,1,68,33
+
+[imMario]
+Coordinates=10,10,49,51
+Visible=True
+
+[btnPegarCogumelo]
+Coordinates=146,10,53,51
+
+[btnLevarDano]
+Coordinates=77,10,53,51
+

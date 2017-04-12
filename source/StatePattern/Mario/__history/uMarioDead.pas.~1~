@@ -1,0 +1,39 @@
+unit uMarioDead;
+
+interface
+
+uses
+  uMarioStateAPI;
+
+type
+  TMarioDead = class(TInterfacedObject, IMarioStateAPI)
+  private
+    function GetImagemMario: integer;
+  public
+    property ImagemMario: integer read GetImagemMario;
+    function PegarCogumelo: IMarioStateAPI;
+    function LevarDano: IMarioStateAPI;
+  end;
+
+implementation
+
+{ TMarioDead }
+
+function TMarioDead.GetImagemMario: integer;
+begin
+  result := 2;
+end;
+
+
+function TMarioDead.LevarDano: IMarioStateAPI;
+begin
+  result := self;
+end;
+
+function TMarioDead.PegarCogumelo: IMarioStateAPI;
+begin
+  result := Self;
+end;
+
+end.
+

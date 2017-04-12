@@ -1,0 +1,48 @@
+unit uMarioBig;
+
+interface
+
+uses
+  uMarioBase, uMarioStateAPI;
+
+type
+  TMarioBigclass = class(TMarioBase, IMarioStateAPI)
+  public
+    constructor Create;
+    function NovaVida: IMarioStateAPI; override;
+    function PegarCogumelo: IMarioStateAPI; override;
+    function LevarDano: IMarioStateAPI; override;
+  end;
+
+implementation
+
+uses
+ uMarioSmall;
+
+const
+  n_IDX_MARIO_BIG = 1;
+
+{ TMarioBigclass }
+
+constructor TMarioBigclass.Create;
+begin
+  nImage := n_IDX_MARIO_BIG;
+end;
+
+function TMarioBigclass.LevarDano: IMarioStateAPI;
+begin
+
+end;
+
+function TMarioBigclass.NovaVida: IMarioStateAPI;
+begin
+
+end;
+
+function TMarioBigclass.PegarCogumelo: IMarioStateAPI;
+begin
+
+end;
+
+end.
+

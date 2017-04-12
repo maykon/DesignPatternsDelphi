@@ -1,0 +1,25 @@
+unit uMarioBase;
+
+interface
+
+uses
+  uMarioStateAPI;
+
+type
+  TMarioBase = class(TInterfacedObject, IMarioStateAPI)
+  private
+    FoOnImageChange: TOnImageChange;
+    procedure SetOnImageChange(Sender: TOnImageChange);
+    function GetOnImagemChange: TOnImageChange;
+  protected
+    procedure DoOnImageChange(const nIdxImage: integer);
+  public
+    function NovaVida: IMarioStateAPI; virtual;
+    function PegarCogumelo: IMarioStateAPI; virtual;
+    function LevarDano: IMarioStateAPI; virtual;
+    property OnImageChange: TOnImageChange read GetOnImagemChange write SetOnImageChange;
+  end;
+
+implementation
+
+end.

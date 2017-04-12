@@ -1,0 +1,19 @@
+unit uMarioStateAPI;
+
+interface
+
+type
+  TOnImageChange = procedure(const poSender: TObject; const nIdxImage: integer) of object;
+
+  IMarioStateAPI = interface['{162CF130-D74A-4390-A6F8-58F99D2FA007}']
+    function SetOnImageChange(Sender: TOnImageChange);
+    function GetOnImagemChange: TOnImageChange;
+    function DoOnImageChange(const nIdxImage: integer);
+    property OnImageChange: TOnImageChange read GetOnImagemChange;
+    function PegarCogumelo: IMarioStateAPI;
+    function LevarDano: IMarioStateAPI;
+  end;
+
+implementation
+
+end.

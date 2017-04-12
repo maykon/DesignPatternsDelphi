@@ -1,0 +1,77 @@
+unit uMarioApp;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, uMario,
+  System.ImageList, Vcl.ImgList;
+
+type
+  TfrmMario = class(TForm)
+    imMario: TImage;
+    btnPegarCogumelo: TButton;
+    btnLevarDano: TButton;
+    ilMario: TImageList;
+    Button1: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure btnPegarCogumeloClick(Sender: TObject);
+    procedure btnLevarDanoClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+    FoMario: uMario;
+    procedure AtualizarImagemMario;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMario: TfrmMario;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmMario.AtualizarImagemMario;
+var
+  oBitMap: TBitMap;
+begin
+  oBitMap := TBitMap.Create;
+  try
+    ilMario.GetBitmap(FoMario.nImagem, oBitMap);
+    imMario.Picture.Assign(oBitMap);
+  finally
+    FreeAndNil(oBitMap);
+  end;
+end;
+
+procedure TfrmMario.btnLevarDanoClick(Sender: TObject);
+begin
+  FoMario.LevarDano;
+  AtualizarImagemMario;
+end;
+
+procedure TfrmMario.btnPegarCogumeloClick(Sender: TObject);
+begin
+  FoMario.PegarCogumelo;
+  AtualizarImagemMario;
+end;
+
+procedure TfrmMario.Button1Click(Sender: TObject);
+begin
+  FoMario.NovaVida;
+end;
+
+procedure TfrmMario.CriarMarioPequeno;
+begin
+  FoMarioState := TMarioSmall.Create;
+  AtualizarImagemMario;
+end;
+
+procedure TfrmMario.FormCreate(Sender: TObject);
+begin
+  FoMario := TMario.Create;
+end;
+
+end.

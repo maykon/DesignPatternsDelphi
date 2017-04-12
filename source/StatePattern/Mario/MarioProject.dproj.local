@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/04/11 01:39:08.000.359,=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/04/11 01:41:45.000.499,=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/04/11 01:43:58.000.590,C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\uMarioStateAPI.pas=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/04/11 01:44:15.000.789,=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/04/11 01:49:20.000.342,C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\uMarioSmall.pas=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/04/11 01:50:19.000.770,C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\uMarioApp.dfm=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2017/04/11 01:50:19.000.770,C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\uMarioApp.pas=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/04/11 01:50:33.000.774,C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\MarioProject.dproj=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2017/04/11 02:15:10.000.169,=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/04/11 02:16:20.000.433,C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\uMarioBig.pas=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/04/11 02:18:44.000.593,=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/04/11 02:22:48.000.515,C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\uMarioDead.pas=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/04/11 21:45:42.052,=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Mario\Unit1.pas</Transaction>
+    <Transaction>2017/04/11 21:45:50.769,C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Mario\uMario.pas=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Mario\Unit1.pas</Transaction>
+    <Transaction>2017/04/11 21:56:39.980,=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Mario\Unit1.pas</Transaction>
+    <Transaction>2017/04/11 22:02:04.684,C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Mario\uMarioBase.pas=C:\Users\erika\OneDrive\Documentos\Embarcadero\Studio\Projects\Mario\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

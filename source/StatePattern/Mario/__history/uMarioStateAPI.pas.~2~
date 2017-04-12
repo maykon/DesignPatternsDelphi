@@ -1,0 +1,18 @@
+unit uMarioStateAPI;
+
+interface
+
+uses
+  SysUtils;
+
+type
+  IMarioStateAPI = interface['{162CF130-D74A-4390-A6F8-58F99D2FA007}']
+    function GetImagemMario: integer;
+    property OnImageChange: TNotifyEvent read GetImagemMario;
+    function PegarCogumelo: IMarioStateAPI;
+    function LevarDano: IMarioStateAPI;
+  end;
+
+implementation
+
+end.

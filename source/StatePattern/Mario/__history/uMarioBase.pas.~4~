@@ -1,0 +1,60 @@
+unit uMarioBase;
+
+interface
+
+uses
+  uMarioStateAPI;
+
+type
+  TMarioBase = class(TInterfacedObject, IMarioStateAPI)
+  private
+    FoOnImageChange: TOnImageChange;
+    procedure SetOnImageChange(const poSender: TOnImageChange);
+    function GetOnImagemChange: TOnImageChange;
+  protected
+    procedure DoOnImageChange(const pnIdxImage: integer);
+  public
+    function NovaVida: IMarioStateAPI; virtual;
+    function PegarCogumelo: IMarioStateAPI; virtual;
+    function LevarDano: IMarioStateAPI; virtual;
+    property OnImageChange: TOnImageChange read GetOnImagemChange write SetOnImageChange;
+  end;
+
+implementation
+
+{ TMarioBase }
+
+procedure TMarioBase.DoOnImageChange(const pnIdxImage: integer);
+begin
+  if not Assigned(FoOnImageChange) then
+    Exit;
+
+  FoOnImageChange(Self, pnIdxImage);
+end;
+
+function TMarioBase.GetOnImagemChange: TOnImageChange;
+begin
+
+end;
+
+function TMarioBase.LevarDano: IMarioStateAPI;
+begin
+
+end;
+
+function TMarioBase.NovaVida: IMarioStateAPI;
+begin
+
+end;
+
+function TMarioBase.PegarCogumelo: IMarioStateAPI;
+begin
+
+end;
+
+procedure TMarioBase.SetOnImageChange(Sender: TOnImageChange);
+begin
+
+end;
+
+end.

@@ -1,0 +1,42 @@
+unit uMarioBig;
+
+interface
+
+uses
+  uMarioBase, uMarioStateAPI;
+
+type
+  TMarioBig = class(TMarioBase, IMarioStateAPI)
+  public
+    constructor Create;
+    function PegarCogumelo: IMarioStateAPI; override;
+    function LevarDano: IMarioStateAPI; override;
+  end;
+
+implementation
+
+uses
+ uMarioSmall;
+
+const
+  n_IDX_MARIO_BIG = 1;
+
+{ TMarioBig }
+
+constructor TMarioBig.Create;
+begin
+  nImage := n_IDX_MARIO_BIG;
+end;
+
+function TMarioBig.LevarDano: IMarioStateAPI;
+begin
+  result := TMarioSmall.Create;
+end;
+
+function TMarioBig.PegarCogumelo: IMarioStateAPI;
+begin
+  result := Self;
+end;
+
+end.
+

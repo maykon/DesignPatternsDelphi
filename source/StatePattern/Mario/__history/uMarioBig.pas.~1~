@@ -1,0 +1,41 @@
+unit uMarioBig;
+
+interface
+
+uses
+  uMarioStateAPI;
+
+type
+  TMarioBig = class(TInterfacedObject, IMarioStateAPI)
+  private
+    function GetImagemMario: integer;
+  public
+    property ImagemMario: integer read GetImagemMario;
+    function PegarCogumelo: IMarioStateAPI;
+    function LevarDano: IMarioStateAPI;
+  end;
+
+implementation
+
+uses
+ uMarioSmall;
+
+{ TMarioBig }
+
+function TMarioBig.GetImagemMario: integer;
+begin
+  result := 1;
+end;
+
+function TMarioBig.LevarDano: IMarioStateAPI;
+begin
+  result := TMarioSmall.Create;
+end;
+
+function TMarioBig.PegarCogumelo: IMarioStateAPI;
+begin
+  result := self;
+end;
+
+end.
+

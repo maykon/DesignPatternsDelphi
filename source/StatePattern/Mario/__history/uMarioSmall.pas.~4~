@@ -1,0 +1,41 @@
+unit uMarioSmall;
+
+interface
+
+uses
+  uMarioBase, uMarioStateAPI;
+
+type
+  TMarioSmall = class(TMarioBase, IMarioStateAPI)
+  public
+    function NovaVida: IMarioStateAPI; override;
+    function PegarCogumelo: IMarioStateAPI; override;
+    function LevarDano: IMarioStateAPI; override;
+  end;
+
+implementation
+
+uses
+  uMarioBig, uMarioDead;
+
+const
+  n_IDX_MARIO_SMALL = 0;
+
+{ TMarioSmall }
+
+function TMarioSmall.LevarDano: IMarioStateAPI;
+begin
+  result := TMarioDead.Create;
+end;
+
+function TMarioSmall.NovaVida: IMarioStateAPI;
+begin
+
+end;
+
+function TMarioSmall.PegarCogumelo: IMarioStateAPI;
+begin
+
+end;
+
+end.
