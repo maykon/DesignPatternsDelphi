@@ -1,0 +1,26 @@
+unit uCharacter;
+
+interface
+
+uses
+  uCharacterAPI;
+
+type
+  TCharacter = class(TInterfacedObject, ICharacterAPI)
+  private
+    procedure SetAgility(const pnAgility: integer);
+    function GetAgility: integer;
+    procedure SetIntelligence(const pnIntelligence: integer);
+    function GetIntelligence: integer;
+    procedure SetStrength(const pnStrength: integer);
+    function GetStrength: integer;
+  public
+    function Attack: integer;
+    property nAgility: integer read GetAgility write SetAgility;
+    property nIntelligence: integer read SetIntelligence write GetIntelligence;
+    property nStrength: integer read GetStrength write SetStrength;
+  end;
+
+implementation
+
+end.

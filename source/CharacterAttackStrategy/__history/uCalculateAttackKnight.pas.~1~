@@ -1,0 +1,16 @@
+unit uCalculateAttackKnight;
+
+interface
+
+uses
+  uCalculateAttackStrategyAPI, uCharacterAPI;
+
+type
+  TCalculateAttackKnight = class(TInterfacedObject, ICalculateAttackStrategyAPI)
+  public
+    function CalculateAttack(const poCharacter: ICharacterAPI): integer;
+  end;
+
+implementation
+
+end.

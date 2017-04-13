@@ -1,0 +1,78 @@
+unit uFrmCharacterAttack;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.Controls.Presentation, FMX.Edit, FMX.StdCtrls, uCharacterAPI, uCalculateAttackStrategyAPI;
+
+type
+  TForm1 = class(TForm)
+    edtTotalAtaque: TEdit;
+    lbPersonagem: TLabel;
+    rbKnight: TRadioButton;
+    rbWizard: TRadioButton;
+    rbElf: TRadioButton;
+    lbForca: TLabel;
+    gbAtributos: TGroupBox;
+    lbInteligencia: TLabel;
+    lbAgilidade: TLabel;
+    tbInteligencia: TTrackBar;
+    tbAgilidade: TTrackBar;
+    tbForca: TTrackBar;
+    btnCriarPersonagem: TButton;
+    btnAtacar: TButton;
+    lbTotalAtaque: TLabel;
+    procedure btnCriarPersonagemClick(Sender: TObject);
+    procedure btnAtacarClick(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+  private
+    FoCharacter: ICharacterAPI;
+    function CriarCalculateAttackStrategy: ICalculateAttackStrategyAPI;
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+uses
+  uCharacter, uCalculateAttackKnight, uCalculateAttackWizard, uCalculateAttackElf, Math;
+
+{$R *.fmx}
+
+procedure TForm1.btnAtacarClick(Sender: TObject);
+begin
+  edtTotalAtaque.Text := EmptyStr;
+  if not Assigned(FoCharacter) then
+    Exit;
+  FoCharacter.nAgility := Trunc(tbAgilidade.Value);
+  FoCharacter.nIntelligence := Trunc(tbInteligencia.Value);
+  FoCharacter.nStrength := Trunc(tbForca.Value);
+  edtTotalAtaque.Text := IntToStr(FoCharacter.Attack);
+end;
+
+procedure TForm1.btnCriarPersonagemClick(Sender: TObject);
+begin
+  FoCharacter := TCharacter.Create(CriarCalculateAttackStrategy);
+end;
+
+function TForm1.CriarCalculateAttackStrategy: ICalculateAttackStrategyAPI;
+begin
+  if rbWizard.IsChecked then
+    result := TCalculateAttackWizard.Create
+  else if rbElf.IsChecked then
+    result := TCalculateAttackElf.Create
+  else
+    result := TCalculateAttackKnight.Create;
+end;
+
+procedure TForm1.FormDestroy(Sender: TObject);
+begin
+  FoCharacter := nil;
+end;
+
+end.

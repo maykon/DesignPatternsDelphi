@@ -1,0 +1,21 @@
+unit uCalculateAttackStrategyApi;
+
+interface
+
+type
+  ICalculateAttackStrategyAPI = interface
+    procedure SetAgility(const pnAgility: integer);
+    function GetAgility: integer;
+    property nAgility: integer read GetAgility write SetAgility;
+    procedure SetStrength(const pnStrength: integer);
+    function GetStrength: integer;
+    property nStrength: integer read GetStrength write SetStrength;
+    procedure SetIntelligence(const pnIntelligence: integer);
+    function GetIntelligence: integer;
+    property nIntelligence: integer read SetIntelligence write GetIntelligence;
+    function CalculateAttack: integer;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,31 @@
+unit uCalculateAttackElf;
+
+interface
+
+uses
+  uCalculateAttackStrategyAPI, uCharacterAPI, Math;
+
+type
+  TCalculateAttackElf = class(TInterfacedObject, ICalculateAttackStrategyAPI)
+  public
+    function CalculateAttack(const poCharacter: ICharacterAPI): integer;
+  end;
+
+implementation
+
+const
+  nAGILITY_HINT_POINT = 0.65;
+
+{ TCalculateAttackElf }
+
+function TCalculateAttackElf.CalculateAttack(
+  const poCharacter: ICharacterAPI): integer;
+var
+  nLuckFactor: integer;
+begin
+  Randomize;
+  nLuckFactor := Ceil(poCharacter.nAgility * (nAGILITY_HINT_POINT + Random(100)));
+  result := poCharacter.nAgility + nLuckFactor;
+end;
+
+end.

@@ -1,0 +1,19 @@
+program CharacterAttack;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  uCalculateAttackKnight in 'uCalculateAttackKnight.pas',
+  uCalculateAttackStrategyAPI in 'uCalculateAttackStrategyAPI.pas',
+  uCharacter in 'uCharacter.pas',
+  uCharacterAPI in 'uCharacterAPI.pas',
+  uFrmCharacterAttack in 'uFrmCharacterAttack.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

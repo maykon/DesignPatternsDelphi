@@ -1,0 +1,31 @@
+unit uCalculateAttackWizard;
+
+interface
+
+uses
+  uCalculateAttackStrategyAPI, uCharacterAPI, Math;
+
+type
+  TCalculateAttackWizard = class(TInterfacedObject, ICalculateAttackStrategyAPI)
+  public
+    function CalculateAttack(const poCharacter: ICharacterAPI): integer;
+  end;
+
+implementation
+
+const
+  nINTELLIGENCE_HINT_POINT = 0.5;
+
+{ TCalculateAttackKnight }
+
+function TCalculateAttackWizard.CalculateAttack(
+  const poCharacter: ICharacterAPI): integer;
+var
+  nLuckFactor: double;
+begin
+  Randomize;
+  nLuckFactor := Random(100);
+  result := poCharacter.nIntelligence + Ceil(poCharacter.nIntelligence * (nINTELLIGENCE_HINT_POINT + nLuckFactor));
+end;
+
+end.

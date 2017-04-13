@@ -1,0 +1,15 @@
+unit uCalculateAttackStrategyApi;
+
+interface
+
+uses
+  uCharacterAPI;
+
+type
+  ICalculateAttackStrategyAPI = interface
+    function CalculateAttack(const poCharacter: ICharacter): integer;
+  end;
+
+implementation
+
+end.

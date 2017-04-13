@@ -1,0 +1,21 @@
+unit uCharacterAPI;
+
+interface
+
+type
+  ICharacterAPI = interface
+    procedure SetAgility(const pnAgility: integer);
+    function GetAgility: integer;
+    procedure SetIntelligence(const pnIntelligence: integer);
+    function GetIntelligence: integer;
+    procedure SetStrength(const pnStrength: integer);
+    function GetStrength: integer;
+    property nAgility: integer read GetAgility write SetAgility;
+    property nIntelligence: integer read GetIntelligence write SetIntelligence;
+    property nStrength: integer read GetStrength write SetStrength;
+    function Attack: integer;
+  end;
+
+implementation
+
+end.

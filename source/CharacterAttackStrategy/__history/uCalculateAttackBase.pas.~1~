@@ -1,0 +1,15 @@
+unit uCalculateAttackBase;
+
+interface
+
+uses
+  uCalculateAttackStrategyApi;
+
+type
+  TCalculateAttackBase = class(TInterfacedObject, ICalculateAttackStrategyAPI)
+
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,146 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object gbAtributos: TGroupBox
+    Position.X = 8.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 625.000000000000000000
+    Size.Height = 100.000000000000000000
+    Size.PlatformDefault = False
+    Text = ' Atributos '
+    TabOrder = 8
+    object lbInteligencia: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Intelig'#234'ncia: '
+    end
+    object lbAgilidade: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 57.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Agilidade: '
+    end
+    object tbInteligencia: TTrackBar
+      CanParentFocus = True
+      Orientation = Horizontal
+      Position.X = 80.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 529.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+    end
+  end
+  object edtTotalAtaque: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    ReadOnly = True
+    Position.X = 256.000000000000000000
+    Position.Y = 136.000000000000000000
+  end
+  object lbPersonagem: TLabel
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Personagem: '
+  end
+  object rbKnight: TRadioButton
+    GroupName = 'char'
+    IsChecked = True
+    Position.X = 80.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Knight'
+  end
+  object rbWizard: TRadioButton
+    GroupName = 'char'
+    Position.X = 212.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Wizard'
+  end
+  object rbElf: TRadioButton
+    GroupName = 'char'
+    Position.X = 344.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 49.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Elf'
+  end
+  object lbForca: TLabel
+    Position.X = 16.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 41.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'For'#231'a: '
+  end
+  object tbAgilidade: TTrackBar
+    CanParentFocus = True
+    Orientation = Horizontal
+    Position.X = 88.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 529.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+  end
+  object tbForca: TTrackBar
+    CanParentFocus = True
+    Orientation = Horizontal
+    Position.X = 88.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 529.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+  end
+  object btnCriarPersonagem: TButton
+    Position.X = 408.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    Text = 'Criar personagem'
+    OnClick = btnCriarPersonagemClick
+  end
+  object btnAtacar: TButton
+    Position.X = 88.000000000000000000
+    Position.Y = 136.000000000000000000
+    TabOrder = 10
+    Text = 'Atacar'
+    OnClick = btnAtacarClick
+  end
+  object lbTotalAtaque: TLabel
+    Position.X = 176.000000000000000000
+    Position.Y = 140.000000000000000000
+    Size.Width = 73.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Total ataque: '
+  end
+end

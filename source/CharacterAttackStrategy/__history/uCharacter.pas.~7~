@@ -1,0 +1,74 @@
+unit uCharacter;
+
+interface
+
+uses
+  uCharacterAPI, uCalculateAttackStrategyAPI;
+
+type
+  TCharacter = class(TInterfacedObject, ICharacterAPI)
+  private
+    FnStrength: integer;
+    FnAgility: integer;
+    FnIntelligence: integer;
+    FoCalculateAttackAPI: ICalculateAttackStrategyAPI;
+    procedure SetAgility(const pnAgility: integer);
+    function GetAgility: integer;
+    procedure SetIntelligence(const pnIntelligence: integer);
+    function GetIntelligence: integer;
+    procedure SetStrength(const pnStrength: integer);
+    function GetStrength: integer;
+  public
+    constructor Create(const poCalculateAttackAPI: ICalculateAttackStrategyAPI);
+    function Attack: integer;
+    property nAgility: integer read GetAgility write SetAgility;
+    property nIntelligence: integer read GetIntelligence write SetIntelligence;
+    property nStrength: integer read GetStrength write SetStrength;
+  end;
+
+implementation
+
+{ TCharacter }
+
+function TCharacter.Attack: integer;
+begin
+  result := FoCalculateAttackAPI.CalculateAttack(Self);
+end;
+
+constructor TCharacter.Create(
+  const poCalculateAttackAPI: ICalculateAttackStrategyAPI);
+begin
+  FoCalculateAttackAPI := poCalculateAttackAPI;
+end;
+
+function TCharacter.GetAgility: integer;
+begin
+  result := FnAgility;
+end;
+
+function TCharacter.GetIntelligence: integer;
+begin
+  result := FnIntelligence;
+end;
+
+function TCharacter.GetStrength: integer;
+begin
+  result := FnStrength;
+end;
+
+procedure TCharacter.SetAgility(const pnAgility: integer);
+begin
+   FnAgility := pnAgility;
+end;
+
+procedure TCharacter.SetIntelligence(const pnIntelligence: integer);
+begin
+  FnIntelligence := pnIntelligence;
+end;
+
+procedure TCharacter.SetStrength(const pnStrength: integer);
+begin
+  FnStrength := pnStrength;
+end;
+
+end.
